@@ -1,6 +1,6 @@
 # Rick & Morty React App
 
-Demo en Servidor: wwww.satelital.org/rickymorty
+Demo en Servidor: wwww.rickymorty.satelital.org
 
 ## Modo de  Uso
 

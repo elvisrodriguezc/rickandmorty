@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react"
+import React, { useContext, useRef } from "react"
 import { LocationContainer } from "./components/LocationContainer"
 import { LocationInfo } from "./components/LocationInfo"
 import Pagination from "./components/Pagination"
@@ -9,7 +9,6 @@ const AppUI = () => {
   const form = useRef(null)
   const handleButton = (e) => {
     e.preventDefault()
-    console.log(e.target.value)
     getLocaltions("https://rickandmortyapi.com/api/location?name=" + e.target.value)
   }
   const handleSubmit = (e) => {
@@ -23,7 +22,7 @@ const AppUI = () => {
       filter[0].residents.forEach(item => {
         arrayResidents.push(item.slice(item.lastIndexOf("/") + 1))
       })
-      getCharacters("https://rickandmortyapi.com/api/character/" + arrayResidents.toString())
+      getCharacters("https://rickandmortyapi.com/api/character/[" + arrayResidents.toString() + "]")
       handlePageChange(1)
     }
   }

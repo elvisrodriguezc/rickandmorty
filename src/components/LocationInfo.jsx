@@ -5,7 +5,6 @@ import { AppContext } from '../context/AppContext'
 
 const LocationInfo = (props) => {
   const { dataCont } = useContext(AppContext)
-  console.log(dataCont)
   return (
     <div className="container">
       <div className="card text-center">
