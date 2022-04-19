@@ -58,17 +58,9 @@ const AppUI = () => {
         </div>
       </div>
       <LocationContainer>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              {dataCont.isLoading ? <div>Busque una Locacion</div> : <LocationInfo location={dataCont.location} characters={dataCont.characters}></LocationInfo>}
-            </div>
-          </div>
-        </div>
+        {dataCont.isLoading ? <div>Busque una Locacion</div> : <LocationInfo location={dataCont.location} characters={dataCont.characters}></LocationInfo>}
       </LocationContainer>
-      <div className="container">
-        {!dataCont.isLoading && <Pagination />}
-      </div>
+      {!dataCont.isLoading && <Pagination />}
     </React.Fragment>
   )
 }
