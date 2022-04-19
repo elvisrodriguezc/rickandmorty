@@ -69,7 +69,7 @@ const useInitialState = () => {
       ...pagination,
       totalPages: Math.ceil(dataCont.characters.length / pagination.perPage)
     }))
-  }, [pagination.curPage, dataCont.characters])
+  }, [pagination.curPage, dataCont.characters, pagination.perPage])
 
   const handlePageLast = () => {
     setPagination(pagination => ({
