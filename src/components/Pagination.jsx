@@ -11,19 +11,21 @@ const Pagination = () => {
     arrButtons.push(i)
   }
   return (
-    <nav aria-label="Page navigation example">
-      <ul className="pagination justify-content-end">
-        <li className={pagination.curPage === 1 ? "page-item disabled" : "page-item"}>
-          <button className="page-link" tabIndex="-1" aria-disabled="true" onClick={handlePagePrev}>Previous</button>
-        </li>
-        {arrButtons.map(item => {
-          return <PaginationItem key={item} page={item} handlePageChange={() => handlePageChange(item)} curPage={pagination.curPage} />
-        })}
-        <li className={pagination.curPage === pagination.totalPages ? "page-item disabled" : "page-item"}>
-          <button className="page-link" href="#" onClick={handlePageNext}>Next</button>
-        </li>
-      </ul>
-    </nav>
+    <div>
+      <nav aria-label="Page navigation example">
+        <ul className="pagination justify-content-end">
+          <li className={pagination.curPage === 1 ? "page-item disabled" : "page-item"}>
+            <button className="page-link" tabIndex="-1" aria-disabled="true" onClick={handlePagePrev}>Previous</button>
+          </li>
+          {arrButtons.map(item => {
+            return <PaginationItem key={item} page={item} handlePageChange={() => handlePageChange(item)} curPage={pagination.curPage} />
+          })}
+          <li className={pagination.curPage === pagination.totalPages ? "page-item disabled" : "page-item"}>
+            <button className="page-link" href="#" onClick={handlePageNext}>Next</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
   )
 }
 
